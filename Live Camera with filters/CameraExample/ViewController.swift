@@ -61,7 +61,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 			
 			cameraSession.beginConfiguration()
 
-			if (cameraSession.canAddInput(deviceInput) == true) {
+			if (cameraSession.canAddInput(deviceInput)) {
 				cameraSession.addInput(deviceInput)
 			}
 
@@ -69,13 +69,13 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 			dataOutput.videoSettings = [(kCVPixelBufferPixelFormatTypeKey as NSString) : NSNumber(value: kCVPixelFormatType_420YpCbCr8BiPlanarFullRange as UInt32)]
 			dataOutput.alwaysDiscardsLateVideoFrames = true
 
-			if (cameraSession.canAddOutput(dataOutput) == true) {
+			if (cameraSession.canAddOutput(dataOutput)) {
 				cameraSession.addOutput(dataOutput)
 			}
 
 			cameraSession.commitConfiguration()
 
-			let queue = DispatchQueue(label: "com.invasivecode.videoQueue")
+			let queue = DispatchQueue(label: "com.invasivecode.videoQueue2")
 			dataOutput.setSampleBufferDelegate(self, queue: queue)
 
 		}
@@ -84,6 +84,7 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
 		}
 	}
 
+    // MARK: AVCaptureVideoDataOutputSampleBufferDelegate
     
 	func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
 		
@@ -99,6 +100,8 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
         DispatchQueue.main.async {
             // Filtered
             self.imageView.image = filteredImage
+//            self.fpsLabel.setText = "FPS = \(fps)"
+            
             
             // Original image
             //self.imageView.image = UIImage(ciImage: cameraImage, scale: 1.0, orientation: UIImageOrientation.right)
