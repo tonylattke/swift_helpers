@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F0781201DE6DF1F00439990 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07811F1DE6DF1F00439990 /* AppDelegate.swift */; };
+		3F0781221DE6DF1F00439990 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0781211DE6DF1F00439990 /* SceneViewController.swift */; };
+		3F0781251DE6DF1F00439990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0781231DE6DF1F00439990 /* Main.storyboard */; };
+		3F0781271DE6DF1F00439990 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0781261DE6DF1F00439990 /* Assets.xcassets */; };
+		3F07812A1DE6DF1F00439990 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0781281DE6DF1F00439990 /* LaunchScreen.storyboard */; };
+		3F0781351DE6DF1F00439990 /* MetalCubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0781341DE6DF1F00439990 /* MetalCubeTests.swift */; };
+		3F0781401DE6DF1F00439990 /* MetalCubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07813F1DE6DF1F00439990 /* MetalCubeUITests.swift */; };
+		3F07814E1DE6E34600439990 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3F07814D1DE6E34600439990 /* Shaders.metal */; };
+		3F1A10171DF03E1200F3587B /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A10161DF03E1200F3587B /* MetalViewController.swift */; };
+		3F1A10191DF0509D00F3587B /* BufferProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A10181DF0509D00F3587B /* BufferProvider.swift */; };
+		3F1A101B1DF0576800F3587B /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A101A1DF0576800F3587B /* MetalTexture.swift */; };
+		3FB9E4491DE71ECE0082E2F0 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E4481DE71ECE0082E2F0 /* Vertex.swift */; };
+		3FB9E44B1DE71F570082E2F0 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E44A1DE71F570082E2F0 /* Node.swift */; };
+		3FB9E44D1DE720A70082E2F0 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E44C1DE720A70082E2F0 /* Triangle.swift */; };
+		3FB9E44F1DE726D20082E2F0 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E44E1DE726D20082E2F0 /* Cube.swift */; };
+		3FB9E4591DEC2B910082E2F0 /* Matrix4.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB9E4581DEC2B910082E2F0 /* Matrix4.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F0781311DE6DF1F00439990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F0781141DE6DF1F00439990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F07811B1DE6DF1F00439990;
+			remoteInfo = MetalCube;
+		};
+		3F07813C1DE6DF1F00439990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F0781141DE6DF1F00439990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F07811B1DE6DF1F00439990;
+			remoteInfo = MetalCube;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F07811C1DE6DF1F00439990 /* MetalCube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalCube.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F07811F1DE6DF1F00439990 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F0781211DE6DF1F00439990 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
+		3F0781241DE6DF1F00439990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F0781261DE6DF1F00439990 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F0781291DE6DF1F00439990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F07812B1DE6DF1F00439990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F0781301DE6DF1F00439990 /* MetalCubeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalCubeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F0781341DE6DF1F00439990 /* MetalCubeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCubeTests.swift; sourceTree = "<group>"; };
+		3F0781361DE6DF1F00439990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F07813B1DE6DF1F00439990 /* MetalCubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalCubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F07813F1DE6DF1F00439990 /* MetalCubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCubeUITests.swift; sourceTree = "<group>"; };
+		3F0781411DE6DF1F00439990 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F07814D1DE6E34600439990 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		3F1A10161DF03E1200F3587B /* MetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
+		3F1A10181DF0509D00F3587B /* BufferProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferProvider.swift; sourceTree = "<group>"; };
+		3F1A101A1DF0576800F3587B /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
+		3FB9E4481DE71ECE0082E2F0 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		3FB9E44A1DE71F570082E2F0 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		3FB9E44C1DE720A70082E2F0 /* Triangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		3FB9E44E1DE726D20082E2F0 /* Cube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		3FB9E4561DEC2B7D0082E2F0 /* MetalCube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MetalCube-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FB9E4571DEC2B910082E2F0 /* Matrix4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix4.h; sourceTree = "<group>"; };
+		3FB9E4581DEC2B910082E2F0 /* Matrix4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix4.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F0781191DE6DF1F00439990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F07812D1DE6DF1F00439990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0781381DE6DF1F00439990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0781131DE6DF1E00439990 = {
+			isa = PBXGroup;
+			children = (
+				3F07811E1DE6DF1F00439990 /* MetalCube */,
+				3F0781331DE6DF1F00439990 /* MetalCubeTests */,
+				3F07813E1DE6DF1F00439990 /* MetalCubeUITests */,
+				3F07811D1DE6DF1F00439990 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F07811D1DE6DF1F00439990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F07811C1DE6DF1F00439990 /* MetalCube.app */,
+				3F0781301DE6DF1F00439990 /* MetalCubeTests.xctest */,
+				3F07813B1DE6DF1F00439990 /* MetalCubeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F07811E1DE6DF1F00439990 /* MetalCube */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A101A1DF0576800F3587B /* MetalTexture.swift */,
+				3FB9E4571DEC2B910082E2F0 /* Matrix4.h */,
+				3FB9E4581DEC2B910082E2F0 /* Matrix4.m */,
+				3F07811F1DE6DF1F00439990 /* AppDelegate.swift */,
+				3F0781231DE6DF1F00439990 /* Main.storyboard */,
+				3F0781261DE6DF1F00439990 /* Assets.xcassets */,
+				3F0781281DE6DF1F00439990 /* LaunchScreen.storyboard */,
+				3F07812B1DE6DF1F00439990 /* Info.plist */,
+				3F07814D1DE6E34600439990 /* Shaders.metal */,
+				3FB9E4481DE71ECE0082E2F0 /* Vertex.swift */,
+				3FB9E44A1DE71F570082E2F0 /* Node.swift */,
+				3FB9E44C1DE720A70082E2F0 /* Triangle.swift */,
+				3FB9E44E1DE726D20082E2F0 /* Cube.swift */,
+				3FB9E4561DEC2B7D0082E2F0 /* MetalCube-Bridging-Header.h */,
+				3F0781211DE6DF1F00439990 /* SceneViewController.swift */,
+				3F1A10161DF03E1200F3587B /* MetalViewController.swift */,
+				3F1A10181DF0509D00F3587B /* BufferProvider.swift */,
+			);
+			path = MetalCube;
+			sourceTree = "<group>";
+		};
+		3F0781331DE6DF1F00439990 /* MetalCubeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F0781341DE6DF1F00439990 /* MetalCubeTests.swift */,
+				3F0781361DE6DF1F00439990 /* Info.plist */,
+			);
+			path = MetalCubeTests;
+			sourceTree = "<group>";
+		};
+		3F07813E1DE6DF1F00439990 /* MetalCubeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F07813F1DE6DF1F00439990 /* MetalCubeUITests.swift */,
+				3F0781411DE6DF1F00439990 /* Info.plist */,
+			);
+			path = MetalCubeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F07811B1DE6DF1F00439990 /* MetalCube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0781441DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCube" */;
+			buildPhases = (
+				3F0781181DE6DF1F00439990 /* Sources */,
+				3F0781191DE6DF1F00439990 /* Frameworks */,
+				3F07811A1DE6DF1F00439990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalCube;
+			productName = MetalCube;
+			productReference = 3F07811C1DE6DF1F00439990 /* MetalCube.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F07812F1DE6DF1F00439990 /* MetalCubeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F0781471DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCubeTests" */;
+			buildPhases = (
+				3F07812C1DE6DF1F00439990 /* Sources */,
+				3F07812D1DE6DF1F00439990 /* Frameworks */,
+				3F07812E1DE6DF1F00439990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F0781321DE6DF1F00439990 /* PBXTargetDependency */,
+			);
+			name = MetalCubeTests;
+			productName = MetalCubeTests;
+			productReference = 3F0781301DE6DF1F00439990 /* MetalCubeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F07813A1DE6DF1F00439990 /* MetalCubeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F07814A1DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCubeUITests" */;
+			buildPhases = (
+				3F0781371DE6DF1F00439990 /* Sources */,
+				3F0781381DE6DF1F00439990 /* Frameworks */,
+				3F0781391DE6DF1F00439990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F07813D1DE6DF1F00439990 /* PBXTargetDependency */,
+			);
+			name = MetalCubeUITests;
+			productName = MetalCubeUITests;
+			productReference = 3F07813B1DE6DF1F00439990 /* MetalCubeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F0781141DE6DF1F00439990 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = Student;
+				TargetAttributes = {
+					3F07811B1DE6DF1F00439990 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = PETS3Y3UCQ;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+					3F07812F1DE6DF1F00439990 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = PETS3Y3UCQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3F07811B1DE6DF1F00439990;
+					};
+					3F07813A1DE6DF1F00439990 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = PETS3Y3UCQ;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3F07811B1DE6DF1F00439990;
+					};
+				};
+			};
+			buildConfigurationList = 3F0781171DE6DF1F00439990 /* Build configuration list for PBXProject "MetalCube" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F0781131DE6DF1E00439990;
+			productRefGroup = 3F07811D1DE6DF1F00439990 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F07811B1DE6DF1F00439990 /* MetalCube */,
+				3F07812F1DE6DF1F00439990 /* MetalCubeTests */,
+				3F07813A1DE6DF1F00439990 /* MetalCubeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F07811A1DE6DF1F00439990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F07812A1DE6DF1F00439990 /* LaunchScreen.storyboard in Resources */,
+				3F0781271DE6DF1F00439990 /* Assets.xcassets in Resources */,
+				3F0781251DE6DF1F00439990 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F07812E1DE6DF1F00439990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0781391DE6DF1F00439990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F0781181DE6DF1F00439990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1A101B1DF0576800F3587B /* MetalTexture.swift in Sources */,
+				3F1A10191DF0509D00F3587B /* BufferProvider.swift in Sources */,
+				3F07814E1DE6E34600439990 /* Shaders.metal in Sources */,
+				3FB9E44B1DE71F570082E2F0 /* Node.swift in Sources */,
+				3FB9E4491DE71ECE0082E2F0 /* Vertex.swift in Sources */,
+				3FB9E44D1DE720A70082E2F0 /* Triangle.swift in Sources */,
+				3F0781221DE6DF1F00439990 /* SceneViewController.swift in Sources */,
+				3FB9E4591DEC2B910082E2F0 /* Matrix4.m in Sources */,
+				3FB9E44F1DE726D20082E2F0 /* Cube.swift in Sources */,
+				3F0781201DE6DF1F00439990 /* AppDelegate.swift in Sources */,
+				3F1A10171DF03E1200F3587B /* MetalViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F07812C1DE6DF1F00439990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0781351DE6DF1F00439990 /* MetalCubeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F0781371DE6DF1F00439990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F0781401DE6DF1F00439990 /* MetalCubeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F0781321DE6DF1F00439990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F07811B1DE6DF1F00439990 /* MetalCube */;
+			targetProxy = 3F0781311DE6DF1F00439990 /* PBXContainerItemProxy */;
+		};
+		3F07813D1DE6DF1F00439990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F07811B1DE6DF1F00439990 /* MetalCube */;
+			targetProxy = 3F07813C1DE6DF1F00439990 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F0781231DE6DF1F00439990 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F0781241DE6DF1F00439990 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F0781281DE6DF1F00439990 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F0781291DE6DF1F00439990 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F0781421DE6DF1F00439990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F0781431DE6DF1F00439990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F0781451DE6DF1F00439990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalCube/MetalCube-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3F0781461DE6DF1F00439990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCube/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCube;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MetalCube/MetalCube-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3F0781481DE6DF1F00439990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCubeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalCube.app/MetalCube";
+			};
+			name = Debug;
+		};
+		3F0781491DE6DF1F00439990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCubeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCubeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalCube.app/MetalCube";
+			};
+			name = Release;
+		};
+		3F07814B1DE6DF1F00439990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCubeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MetalCube;
+			};
+			name = Debug;
+		};
+		3F07814C1DE6DF1F00439990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = PETS3Y3UCQ;
+				INFOPLIST_FILE = MetalCubeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.hsb.tl.MetalCubeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MetalCube;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F0781171DE6DF1F00439990 /* Build configuration list for PBXProject "MetalCube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0781421DE6DF1F00439990 /* Debug */,
+				3F0781431DE6DF1F00439990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0781441DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0781451DE6DF1F00439990 /* Debug */,
+				3F0781461DE6DF1F00439990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F0781471DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCubeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F0781481DE6DF1F00439990 /* Debug */,
+				3F0781491DE6DF1F00439990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F07814A1DE6DF1F00439990 /* Build configuration list for PBXNativeTarget "MetalCubeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F07814B1DE6DF1F00439990 /* Debug */,
+				3F07814C1DE6DF1F00439990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F0781141DE6DF1F00439990 /* Project object */;
+}

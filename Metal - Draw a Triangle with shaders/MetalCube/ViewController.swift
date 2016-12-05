@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         device = MTLCreateSystemDefaultDevice()
         
         // Setting metalLayer
-        metalLayer = CAMetalLayer()
+        metalLayer = CATextLayer()
         metalLayer.device = device
         metalLayer.pixelFormat = .bgra8Unorm
         metalLayer.framebufferOnly = true
