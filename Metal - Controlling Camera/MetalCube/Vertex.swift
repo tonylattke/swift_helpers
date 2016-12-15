@@ -1,0 +1,20 @@
+//
+//  Vertex.swift
+//  MetalCube
+//
+//  Created by Tony Lattke on 24.11.16.
+//  Copyright © 2016 Hochschule Bremen. All rights reserved.
+//
+
+struct Vertex{
+    
+    var x,y,z: Float    // position data
+    var r,g,b,a: Float  // color data
+    var s,t: Float      // texture coordinates
+    var nX,nY,nZ: Float // Normal
+    
+    func floatBuffer() -> [Float] {
+        return [x,y,z,r,g,b,a,s,t,nX,nY,nZ]
+    }
+    
+};
