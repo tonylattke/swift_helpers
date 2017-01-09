@@ -39,6 +39,11 @@ class SceneViewController: MetalViewController, MetalViewControllerDelegate, AVC
     
     var renderPassDescriptor: MTLRenderPassDescriptor!
     
+    var lastTime: CFTimeInterval = 0
+    var fps: Int = 60
+    
+    @IBOutlet weak var fpsLabel: UILabel!
+    
     // Inititalization
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -155,8 +160,8 @@ class SceneViewController: MetalViewController, MetalViewControllerDelegate, AVC
     
     //MARK: - MetalViewControllerDelegate
     func renderObjects(drawable:CAMetalDrawable) {
-        // Background
         
+        // Background
         renderPassDescriptor.colorAttachments[0].texture = drawable.texture
         renderPassDescriptor.colorAttachments[0].loadAction = .clear
         renderPassDescriptor.colorAttachments[0].clearColor = MTLClearColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -187,12 +192,22 @@ class SceneViewController: MetalViewController, MetalViewControllerDelegate, AVC
         // Commit your Command Buffer
         commandBuffer.present(drawable)
         commandBuffer.commit()
+        
+        fpsLabel.text = "FPS = \(fps)"
     }
     
     // Update timer on Objects
-    func updateLogic(timeSinceLastUpdate: CFTimeInterval) {
-        cube.updateWithDelta(delta: timeSinceLastUpdate)
-        cameraPlane.updateWithDelta(delta: timeSinceLastUpdate)
+    func updateLogic(time: CFTimeInterval) {
+        fps = 60
+        let elapsed = time - lastTime
+        
+        if elapsed > 0 {
+            fps = Int(round(1 / elapsed)/60)
+        }
+        lastTime = time
+        
+        cube.updateWithDelta(delta: time)
+        cameraPlane.updateWithDelta(delta: time)
     }
     
     //MARK: - Gesture related

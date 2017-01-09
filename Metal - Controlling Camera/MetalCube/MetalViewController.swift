@@ -12,7 +12,7 @@ import QuartzCore
 import simd
 
 protocol MetalViewControllerDelegate : class{
-    func updateLogic(timeSinceLastUpdate:CFTimeInterval)
+    func updateLogic(time:CFTimeInterval)
     func renderObjects(drawable:CAMetalDrawable)
 }
 
@@ -108,6 +108,8 @@ class MetalViewController: UIViewController {
     // Render
     func render(_ drawable: CAMetalDrawable?) {
         guard let drawable = drawable else { return }
+        let elapsed:CFTimeInterval = CACurrentMediaTime()
+        self.metalViewControllerDelegate?.updateLogic(time: elapsed)
         self.metalViewControllerDelegate?.renderObjects(drawable: drawable)
     }
 
