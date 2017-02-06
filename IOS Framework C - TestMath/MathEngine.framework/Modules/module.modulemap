@@ -1,0 +1,10 @@
+framework module MathEngine {
+  umbrella header "MathEngine.h"
+
+  export *
+  module * { export * }
+}
+
+module MathEngine.Swift {
+    header "MathEngine-Swift.h"
+}

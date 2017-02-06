@@ -1,0 +1,6 @@
+framework module MatrixEngine {
+  umbrella header "MatrixEngine.h"
+
+  export *
+  module * { export * }
+}
